@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+    //가변형 함수 만들기 
+	function msArray() {
+		var str = "";
+		if (arguments.length == 0) {
+		} else if (arguments.length == 1) {
+
+			for (var i = 0; i < arguments[0]; i++) {
+				str += " ,";
+			}
+
+		} else {
+			for ( var i in arguments) {
+				str += arguments[i] + ",";
+			}
+		}
+		return str;	}
+
+	// 함수를 호출합니다.
+	alert(msArray());
+	alert(msArray(10));
+	alert(msArray(1, 2, 3, 4, 5, 6, 7, 8, 9));
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

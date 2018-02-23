@@ -1,0 +1,20 @@
+//클로저
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+		function outerFunction(name){
+			var output = '안녕 ' +name + '!';
+			return function(){
+				alert(output);
+			};
+		}
+		outerFunction('성은')();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script> 
+
+function shArray(){
+	var str = ""; 
+	if(arguments.length == 0){
+		
+	}else if(arguments.length == 1){
+		for(var i = 0; i<arguments[0]; i++){
+			str += " ,";
+		}
+	}else{
+		for(var i in arguments){
+			str += arguments[i] + ",";
+		}
+	}
+	return str;
+}
+
+	alert(shArray());
+	alert(shArray(10));
+	alert(shArray(1,2,3,4,5,6,7,8,9));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

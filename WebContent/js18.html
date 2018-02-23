@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+		function Rectangle(w,h){
+			var width = w;
+			var height = h;
+			
+			this.getWidth = function(){return width;};
+			this.getHeight = function(){return height;};
+			this.setWidth= function (value){
+				if(value <0){
+					throw '길이는 음수일 수 없습니다';
+				}else{
+					width = value;
+				}
+			};
+			this.setHeight = function (value){
+				if(value <0 ){
+					throw '길이는 음수일 수 없습니다';
+				}else{
+					height = value;
+				}
+			};
+		}
+		
+		Rectangle.prototype.getArea = function(){
+			return this.getWidth() * this.getHeight();};
+			
+			function Square(length){
+				this.base = Rectangle; 
+				this.base(length, length); }
+			
+			Square.prototype = Rectangle.prototype;
+			
+			var rectangle = new Rectangle(5, 7);
+			var square = new Square(5);
+			
+			alert(rectangle.getArea() + ':' + square.getArea());
+	</script>
+</head>
+<body>
+
+</body>
+</html>
